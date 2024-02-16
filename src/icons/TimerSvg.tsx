@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 type Props = {
-    className?: string
-}
+    className?: string;
+};
 
-const SvgElement = styled('svg')`
+const SvgElement = styled("svg")`
     height: auto;
 `;
 
-export const TimerSVG = ({className}: Props) => (
+export const TimerSVG = ({ className }: Props) => (
     <SvgElement
         width="24"
         height="24"
@@ -17,11 +17,6 @@ export const TimerSVG = ({className}: Props) => (
         fill="#000"
         className={className}
     >
-        <path fill="fill" d="m9 24h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2z" />
-        <path fill="fill" d="m7 20h-6a1 1 0 0 1 0-2h6a1 1 0 0 1 0 2z" />
-        <path fill="fill" d="m5 16h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 0 2z" />
-        <path fill="fill" d="m13 23.955a1 1 0 0 1 -.089-2 10 10 0 1 0 -10.87-10.865 1 1 0 0 1 -1.992-.18 12 12 0 0 1 23.951 1.09 11.934 11.934 0 0 1 -10.91 11.951c-.03.003-.061.004-.09.004z" />
-        <path fill="fill" d="m12 6a1 1 0 0 0 -1 1v5a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414l-2.707-2.707v-4.586a1 1 0 0 0 -1-1z" />
+        <path fill="fill" d="M15.91 13.34l2.636-4.026-.454-.406-3.673 3.099c-.675-.138-1.402.068-1.894.618-.736.823-.665 2.088.159 2.824.824.736 2.088.665 2.824-.159.492-.55.615-1.295.402-1.95zm-3.91-10.646v-2.694h4v2.694c-1.439-.243-2.592-.238-4 0zm8.851 2.064l1.407-1.407 1.414 1.414-1.321 1.321c-.462-.484-.964-.927-1.5-1.328zm-18.851 4.242h8v2h-8v-2zm-2 4h8v2h-8v-2zm3 4h7v2h-7v-2zm21-3c0 5.523-4.477 10-10 10-2.79 0-5.3-1.155-7.111-3h3.28c1.138.631 2.439 1 3.831 1 4.411 0 8-3.589 8-8s-3.589-8-8-8c-1.392 0-2.693.369-3.831 1h-3.28c1.811-1.845 4.321-3 7.111-3 5.523 0 10 4.477 10 10z" />
     </SvgElement>
 );
-
