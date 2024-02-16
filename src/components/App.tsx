@@ -1,6 +1,6 @@
 "use client";
 import styled, { createGlobalStyle } from "styled-components";
-import { TimerSVG } from "./icon/TimerSvg";
+import { TimerSVG } from "@/icons";
 import { Timer } from "./Timer";
 import { ResetCss } from "./ResetCss";
 import "@fontsource/baloo-da-2";
