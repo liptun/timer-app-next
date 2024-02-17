@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
 
     body {
         font-size: 1em;
-        background: ${({ theme }) => theme.bodyBackground};
+        background: ${({ theme }) => theme.background.primary};
         color: white;
     }
 
