@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { ResetCss } from "./Reset.style";
 import {
-    ThemeProvider as StyledTyemeProvider,
+    ThemeProvider as StyledThemeProvider,
     createGlobalStyle,
 } from "styled-components";
 import { theme } from "./theme";
@@ -27,10 +27,11 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
 type Props = {
     children?: ReactElement | ReactElement[];
 };
+
 export const ThemeProvider = ({ children }: Props) => (
-    <StyledTyemeProvider theme={theme}>
+    <StyledThemeProvider theme={theme}>
         <ResetCss />
         <GlobalStyles theme={theme} />
         {children}
-    </StyledTyemeProvider>
+    </StyledThemeProvider>
 );
