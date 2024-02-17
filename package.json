@@ -9,7 +9,10 @@
         "lint": "next lint",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "test": "jest"
+        "test": "jest",
+        "jest:watch": "jest --watchAll",
+        "jest:coverage": "jest --coverage --watchAll",
+        "coverage-raport": "npx http-server ./coverage/lcov-report"
     },
     "dependencies": {
         "@fontsource/baloo-da-2": "^5.0.18",
@@ -43,6 +46,7 @@
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
         "storybook": "^7.6.16",
+        "ts-node": "^10.9.2",
         "typescript": "^5"
     }
 }
