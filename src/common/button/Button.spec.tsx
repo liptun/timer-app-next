@@ -3,16 +3,14 @@ import { render, screen } from "@testing-library/react";
 import { Button } from ".";
 import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 
-describe("Page", () => {
-    it("Renders a <Button>", () => {
+describe("Button", () => {
+    it("with label", () => {
         render(
             <ThemeProvider>
                 <Button>Button</Button>
             </ThemeProvider>
         );
-
         const button = screen.getByText("Button");
-
         expect(button).toBeInTheDocument();
     });
 });
