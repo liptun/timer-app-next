@@ -29,4 +29,19 @@ describe("Button", () => {
         button.click();
         expect(callbackFn).toHaveBeenCalledTimes(1);
     });
+
+    it("should not click", () => {
+        const callbackFn = jest.fn();
+
+        render(
+            <ThemeProvider>
+                <Button onClickHandle={callbackFn} disabled>Button</Button>
+            </ThemeProvider>
+        );
+        const button = screen.getByText("Button");
+
+        expect(callbackFn).toHaveBeenCalledTimes(0);
+        button.click();
+        expect(callbackFn).toHaveBeenCalledTimes(0);
+    });
 });

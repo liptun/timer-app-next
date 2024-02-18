@@ -22,3 +22,15 @@ export const Primary: Story = {
         </ThemeProvider>
     ),
 };
+
+export const Disabled: Story = {
+    args: {
+        children: "Disabled",
+        disabled: true,
+    },
+    render: (args) => (
+        <ThemeProvider>
+            <Button {...args}>{args.children}</Button>
+        </ThemeProvider>
+    ),
+};
