@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import * as Icons from ".";
 import styled from "styled-components";

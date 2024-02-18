@@ -21,7 +21,7 @@
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "no-console": "warn",
-        "sort-imports": "error"
+        "no-duplicate-imports": "error"
     },
     "settings": {
         "react": {

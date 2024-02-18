@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 import { ResetCss } from "./Reset.style";
 import {
     ThemeProvider as StyledThemeProvider,
     createGlobalStyle,
 } from "styled-components";
-import { theme } from "./theme";
-import type { Theme } from "./theme";
+import { theme, Theme } from "./theme";
 import "@fontsource/baloo-da-2";
 
 export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
