@@ -1,11 +1,10 @@
-import { Meta, Source, Title } from '@storybook/blocks';
+import { Source, Title } from '@storybook/blocks';
 import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 import { Button } from ".";
-import * as ButtonStories from './Button.stories';
 
 <Title>Button Primary</Title>
 
 <ThemeProvider>
     <Button>Test</Button>
 </ThemeProvider>
-<Source of={ButtonStories.Primary} />
+<Source code={`<Button>Test</Button>`} />
