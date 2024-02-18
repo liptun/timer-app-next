@@ -13,7 +13,8 @@
         "jest:watch": "jest --watchAll",
         "jest:coverage": "jest --coverage --watchAll",
         "coverage-raport": "npx http-server ./coverage/lcov-report",
-        "eslint": "eslint ."
+        "eslint": "eslint .",
+        "eslint:fix": "eslint --fix ."
     },
     "dependencies": {
         "@fontsource/baloo-da-2": "^5.0.18",
