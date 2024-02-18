@@ -6,6 +6,8 @@ import {
 } from "styled-components";
 import { theme, Theme } from "./theme";
 import "@fontsource/baloo-da-2";
+import "@fontsource/baloo-da-2/700.css";
+import "@fontsource/baloo-da-2/800.css";
 
 export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
     html {
