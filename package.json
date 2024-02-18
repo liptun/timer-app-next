@@ -12,7 +12,8 @@
         "test": "jest",
         "jest:watch": "jest --watchAll",
         "jest:coverage": "jest --coverage --watchAll",
-        "coverage-raport": "npx http-server ./coverage/lcov-report"
+        "coverage-raport": "npx http-server ./coverage/lcov-report",
+        "eslint": "eslint ."
     },
     "dependencies": {
         "@fontsource/baloo-da-2": "^5.0.18",
@@ -40,8 +41,11 @@
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
+        "@typescript-eslint/eslint-plugin": "^7.0.1",
+        "@typescript-eslint/parser": "^7.0.1",
         "eslint": "^8",
         "eslint-config-next": "14.0.3",
+        "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-storybook": "^0.8.0",
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
