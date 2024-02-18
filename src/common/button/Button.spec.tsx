@@ -5,7 +5,7 @@ import { Button } from ".";
 import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 
 describe("Button", () => {
-    it("with label", () => {
+    it("render label", () => {
         render(
             <ThemeProvider>
                 <Button>Button</Button>
@@ -13,5 +13,20 @@ describe("Button", () => {
         );
         const button = screen.getByText("Button");
         expect(button).toBeInTheDocument();
+    });
+
+    it("onClickHandle call", () => {
+        const callbackFn = jest.fn();
+
+        render(
+            <ThemeProvider>
+                <Button onClickHandle={callbackFn}>Button</Button>
+            </ThemeProvider>
+        );
+        const button = screen.getByText("Button");
+
+        expect(callbackFn).toHaveBeenCalledTimes(0);
+        button.click();
+        expect(callbackFn).toHaveBeenCalledTimes(1);
     });
 });
