@@ -2,9 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TimerSVG } from "@/icons";
-import { Timer } from "./Timer";
 import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
-import { Button } from "@/common/button";
 import { Time } from "./time/Time";
 
 const TimerIcon = styled(TimerSVG)`
@@ -18,9 +16,7 @@ export const App = () => {
             <TimerIcon />
             <h1>Timę app</h1>
             <p>Count time like a pro</p>
-            <Timer />
-            <Button>Button</Button>
-            <Time hours={0} minutes={0} seconds={0} />
+            <Time hours={12} minutes={37} seconds={4} />
         </ThemeProvider>
     );
 };
