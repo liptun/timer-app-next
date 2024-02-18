@@ -1,6 +1,7 @@
 import { Theme } from "@/utils/ThemeProvider/theme";
 import React from "react";
 import styled from "styled-components";
+import { numberToString } from "./Numbers.utils";
 
 const Digit = styled("span")<{ theme: Theme; narrow?: boolean }>`
     font-size: 4em;
@@ -20,21 +21,24 @@ type Props = {
     microseconds: number;
 };
 
-export const Numbers = () => {
+export const Numbers = ({ hours, minutes, seconds, microseconds }: Props) => {
     return (
         <>
-            <Digit>2</Digit>
-            <Digit>1</Digit>
+            {[...numberToString(hours, 2)].map((digit, index) => (
+                <Digit key={index}>{digit}</Digit>
+            ))}
             <Digit narrow>:</Digit>
-            <Digit>3</Digit>
-            <Digit>7</Digit>
+            {[...numberToString(minutes, 2)].map((digit, index) => (
+                <Digit key={index}>{digit}</Digit>
+            ))}
             <Digit narrow>:</Digit>
-            <Digit>6</Digit>
-            <Digit>9</Digit>
+            {[...numberToString(seconds, 2)].map((digit, index) => (
+                <Digit key={index}>{digit}</Digit>
+            ))}
             <Digit narrow>:</Digit>
-            <Digit>7</Digit>
-            <Digit>7</Digit>
-            <Digit>7</Digit>
+            {[...numberToString(microseconds, 3)].map((digit, index) => (
+                <Digit key={index}>{digit}</Digit>
+            ))}
         </>
     );
 };

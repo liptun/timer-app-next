@@ -13,9 +13,15 @@ export default meta;
 type Story = StoryObj<typeof Numbers>;
 
 export const Primary: Story = {
-    render: () => (
+    args: {
+        hours: 1,
+        minutes: 1,
+        seconds: 1,
+        microseconds: 1,
+    },
+    render: (args) => (
         <ThemeProvider>
-            <Numbers />
+            <Numbers {...args} />
         </ThemeProvider>
     ),
 };
