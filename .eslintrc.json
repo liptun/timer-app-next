@@ -2,11 +2,13 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest/globals": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:jest/recommended"
     ],
     "overrides": [],
     "parser": "@typescript-eslint/parser",
@@ -14,7 +16,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["react"],
+    "plugins": ["react", "jest"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],
