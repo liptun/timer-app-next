@@ -10,20 +10,18 @@ type Props = {
     microseconds?: number;
 };
 
-export const Time = ({ hours, minutes, seconds, microseconds }: Props) => {
-    return (
-        <TimeWrapper>
-            <Numbers number={hours} digits={2} />
-            <Digit narrow>:</Digit>
-            <Numbers number={minutes} digits={2} />
-            <Digit narrow>:</Digit>
-            <Numbers number={seconds} digits={2} />
-            {microseconds !== undefined && (
-                <>
-                    <Digit narrow>:</Digit>
-                    <Numbers number={microseconds} digits={3} />
-                </>
-            )}
-        </TimeWrapper>
-    );
-};
+export const Time = ({ hours, minutes, seconds, microseconds }: Props) => (
+    <TimeWrapper>
+        <Numbers number={hours} digits={2} />
+        <Digit narrow>:</Digit>
+        <Numbers number={minutes} digits={2} />
+        <Digit narrow>:</Digit>
+        <Numbers number={seconds} digits={2} />
+        {microseconds !== undefined && (
+            <>
+                <Digit narrow>:</Digit>
+                <Numbers number={microseconds} digits={3} />
+            </>
+        )}
+    </TimeWrapper>
+);
