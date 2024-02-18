@@ -5,19 +5,17 @@ import { Numbers } from "./Numbers";
 import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 
 const meta: Meta<typeof Numbers> = {
-    title: "Common/Numbers",
+    title: "Components/Numbers",
     component: Numbers,
 };
 export default meta;
 
 type Story = StoryObj<typeof Numbers>;
 
-export const Primary: Story = {
+export const Basic: Story = {
     args: {
-        hours: 1,
-        minutes: 1,
-        seconds: 1,
-        microseconds: 1,
+        number: 12,
+        digits: 2,
     },
     render: (args) => (
         <ThemeProvider>
