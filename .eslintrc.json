@@ -22,7 +22,9 @@
         "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "no-console": "warn",
-        "no-duplicate-imports": "error"
+        "no-duplicate-imports": "error",
+        "no-var": "error",
+        "no-alert": "error"
     },
     "settings": {
         "react": {
