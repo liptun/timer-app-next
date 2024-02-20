@@ -17,5 +17,5 @@ export const ButtonElement = styled("button")<{
     padding: 0.3em 0.6em;
     background: ${({ theme }): string => theme.color.primary};
     color: ${({ theme }): string => theme.color.textLight};
-    ${({ disabled }): RuleSet | null => (disabled ? disabledButtonCss : null)}
+    ${({ disabled }): RuleSet | null => (disabled === true ? disabledButtonCss : null)}
 `;
