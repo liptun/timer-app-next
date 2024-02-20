@@ -1,4 +1,4 @@
-export const numberToString = (number: number, digits: number) => {
+export const numberToString = (number: number, digits: number): string => {
     const numberString = number.toString();
     const difference = digits - numberString.length;
     if (difference > 0) {

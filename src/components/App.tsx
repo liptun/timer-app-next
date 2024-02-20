@@ -10,7 +10,7 @@ const TimerIcon = styled(TimerSVG)`
     width: 64px;
 `;
 
-export const App = () => {
+export const App = (): JSX.Element => {
     return (
         <ThemeProvider>
             <TimerIcon />

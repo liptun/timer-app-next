@@ -11,7 +11,7 @@ export const Button = ({
     onClickHandle,
     children,
     disabled = false,
-}: Props) => (
+}: Props): JSX.Element => (
     <ButtonElement onClick={onClickHandle} disabled={disabled}>
         {children}
     </ButtonElement>

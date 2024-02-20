@@ -10,32 +10,32 @@ export class CounterState {
         this.start();
     }
 
-    @action public start = () => {
+    @action public start = (): void => {
         this.interval = setInterval(() => {
             this.clock = dayjs();
         }, 10);
     };
 
-    @action public stop = () => {
+    @action public stop = (): void => {
         if (this.interval) {
             clearInterval(this.interval);
             this.interval = null;
         }
     };
 
-    @computed get hours(): number {
+    @computed public get hours(): number {
         return this.clock?.hour() ?? 0;
     }
 
-    @computed get minutes(): number {
+    @computed public get minutes(): number {
         return this.clock?.minute() ?? 0;
     }
 
-    @computed get seconds(): number {
+    @computed public get seconds(): number {
         return this.clock?.second() ?? 0;
     }
 
-    @computed get microseconds(): number {
+    @computed public get microseconds(): number {
         return this.clock?.millisecond() ?? 0;
     }
 }

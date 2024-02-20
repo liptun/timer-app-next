@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
 
     body {
         font-size: 1em;
-        background: ${({ theme }) => theme.background.primary};
+        background: ${({ theme }): string => theme.background.primary};
         color: white;
     }
 
@@ -29,7 +29,7 @@ type Props = {
     children?: ReactElement | ReactElement[];
 };
 
-export const ThemeProvider = ({ children }: Props) => (
+export const ThemeProvider = ({ children }: Props): JSX.Element => (
     <StyledThemeProvider theme={theme}>
         <ResetCss />
         <GlobalStyles theme={theme} />

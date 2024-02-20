@@ -1,5 +1,5 @@
 import { Theme } from "@/utils/ThemeProvider/theme";
-import styled, { css } from "styled-components";
+import styled, { RuleSet, css } from "styled-components";
 
 const disabledButtonCss = css`
     pointer-events: none;
@@ -15,7 +15,7 @@ export const ButtonElement = styled("button")<{
     cursor: pointer;
     border-radius: 2em;
     padding: 0.3em 0.6em;
-    background: ${({ theme }) => theme.color.primary};
-    color: ${({ theme }) => theme.color.textLight};
-    ${({ disabled }) => (disabled ? disabledButtonCss : null)}
+    background: ${({ theme }): string => theme.color.primary};
+    color: ${({ theme }): string => theme.color.textLight};
+    ${({ disabled }): RuleSet | null => (disabled ? disabledButtonCss : null)}
 `;

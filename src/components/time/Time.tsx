@@ -10,7 +10,7 @@ type Props = {
     microseconds?: number;
 };
 
-export const Time = ({ hours, minutes, seconds, microseconds }: Props) => (
+export const Time = ({ hours, minutes, seconds, microseconds }: Props): JSX.Element => (
     <TimeWrapper>
         <Numbers number={hours} digits={2} />
         <Digit $narrow>:</Digit>

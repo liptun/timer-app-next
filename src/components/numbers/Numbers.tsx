@@ -7,7 +7,7 @@ type Props = {
     digits: number;
 };
 
-export const Numbers = ({ number, digits = 2 }: Props) => (
+export const Numbers = ({ number, digits = 2 }: Props): JSX.Element => (
     <>
         {[...numberToString(number, digits)].map((digit, index) => (
             <Digit key={index}>{digit}</Digit>

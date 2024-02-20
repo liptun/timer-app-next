@@ -9,7 +9,7 @@ const SvgElement = styled("svg")`
     height: auto;
 `;
 
-export const EditSVG = ({ className }: Props) => (
+export const EditSVG = ({ className }: Props): JSX.Element => (
     <SvgElement
         width="24"
         height="24"
