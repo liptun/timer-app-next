@@ -11,6 +11,9 @@ dependencies:
   '@styled/typescript-styled-plugin':
     specifier: ^1.0.0
     version: 1.0.1
+  dayjs:
+    specifier: ^1.11.10
+    version: 1.11.10
   mobx:
     specifier: ^6.11.0
     version: 6.12.0
@@ -6135,6 +6138,10 @@ packages:
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
     dev: true
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: false
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}

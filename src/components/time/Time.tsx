@@ -13,13 +13,13 @@ type Props = {
 export const Time = ({ hours, minutes, seconds, microseconds }: Props) => (
     <TimeWrapper>
         <Numbers number={hours} digits={2} />
-        <Digit narrow>:</Digit>
+        <Digit $narrow>:</Digit>
         <Numbers number={minutes} digits={2} />
-        <Digit narrow>:</Digit>
+        <Digit $narrow>:</Digit>
         <Numbers number={seconds} digits={2} />
         {microseconds !== undefined && (
             <>
-                <Digit narrow>:</Digit>
+                <Digit $narrow>:</Digit>
                 <Numbers number={microseconds} digits={3} />
             </>
         )}

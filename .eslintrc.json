@@ -2,8 +2,14 @@
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true,
-        "jest/globals": true
+        "node": true
+    },
+    "globals": {
+        "NodeJS": true,
+        "jest": "readonly",
+        "describe": "readonly",
+        "it": "readonly",
+        "expect": "readonly"
     },
     "extends": [
         "eslint:recommended",
