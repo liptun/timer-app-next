@@ -10,10 +10,12 @@ export class CounterState {
         this.start();
     }
 
+    @action private tick = (): void => {
+        this.clock = dayjs();
+    };
+
     @action public start = (): void => {
-        this.interval = setInterval(() => {
-            this.clock = dayjs();
-        }, 10);
+        this.interval = setInterval(this.tick, 10);
     };
 
     @action public stop = (): void => {
