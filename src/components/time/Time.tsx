@@ -12,15 +12,15 @@ type Props = {
 
 export const Time = ({ hours, minutes, seconds, microseconds }: Props): JSX.Element => (
     <TimeWrapper>
-        <Numbers number={hours} digits={2} />
+        <Numbers number={hours} digits={2} label="hours" />
         <Digit $narrow>:</Digit>
-        <Numbers number={minutes} digits={2} />
+        <Numbers number={minutes} digits={2} label="minutes" />
         <Digit $narrow>:</Digit>
-        <Numbers number={seconds} digits={2} />
+        <Numbers number={seconds} digits={2} label="seconds" />
         {microseconds !== undefined && (
             <>
                 <Digit $narrow>:</Digit>
-                <Numbers number={microseconds} digits={3} />
+                <Numbers number={microseconds} digits={3} label="micro" />
             </>
         )}
     </TimeWrapper>
