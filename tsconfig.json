@@ -15,12 +15,8 @@
         "incremental": true,
         "experimentalDecorators": true,
         "plugins": [
-            {
-                "name": "next"
-            },
-            {
-                "name": "@styled/typescript-styled-plugin"
-            }
+            { "name": "next" },
+            { "name": "@styled/typescript-styled-plugin" }
         ],
         "paths": {
             "@/*": ["./src/*"]

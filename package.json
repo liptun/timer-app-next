@@ -13,7 +13,7 @@
         "jest:watch": "jest --watchAll",
         "jest:coverage": "jest --coverage --watchAll",
         "coverage-raport": "npx http-server ./coverage/lcov-report",
-        "eslint": "eslint . --ext '.ts, .tsx'",
+        "eslint": "eslint . --ext '.js, .ts, .tsx'",
         "eslint:fix": "eslint --fix ."
     },
     "dependencies": {
