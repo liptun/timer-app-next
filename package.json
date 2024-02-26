@@ -29,6 +29,7 @@
         "zod": "^3.22.4"
     },
     "devDependencies": {
+        "@babel/plugin-proposal-decorators": "^7.23.9",
         "@storybook/addon-essentials": "^7.6.16",
         "@storybook/addon-interactions": "^7.6.16",
         "@storybook/addon-links": "^7.6.16",
