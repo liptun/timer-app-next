@@ -15,7 +15,7 @@ export const Label = styled("span")`
     transform: translateX(-50%);
     text-align: center;
     font-size: 0.8em;
-    opacity: .5;
+    opacity: 0.5;
     font-weight: 700;
 `;
 

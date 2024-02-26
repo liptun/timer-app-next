@@ -1,9 +1,6 @@
 import React, { ReactElement } from "react";
 import { ResetCss } from "./Reset.style";
-import {
-    ThemeProvider as StyledThemeProvider,
-    createGlobalStyle,
-} from "styled-components";
+import { ThemeProvider as StyledThemeProvider, createGlobalStyle } from "styled-components";
 import { theme, Theme } from "./theme";
 import "@fontsource/baloo-da-2";
 import "@fontsource/baloo-da-2/700.css";

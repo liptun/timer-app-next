@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 import { Counter } from "./counter/Counter";
 import { Logo } from "./logo/Logo";
 
-
 export const App = (): JSX.Element => {
     return (
         <ThemeProvider>

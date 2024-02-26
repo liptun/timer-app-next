@@ -35,7 +35,9 @@ describe("Button", () => {
 
         render(
             <ThemeProvider>
-                <Button onClickHandle={callbackFn} disabled>Button</Button>
+                <Button onClickHandle={callbackFn} disabled>
+                    Button
+                </Button>
             </ThemeProvider>
         );
         const button = screen.getByText("Button");

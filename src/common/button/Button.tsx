@@ -7,11 +7,7 @@ type Props = {
     disabled?: boolean;
 };
 
-export const Button = ({
-    onClickHandle,
-    children,
-    disabled = false,
-}: Props): JSX.Element => (
+export const Button = ({ onClickHandle, children, disabled = false }: Props): JSX.Element => (
     <ButtonElement onClick={onClickHandle} disabled={disabled}>
         {children}
     </ButtonElement>

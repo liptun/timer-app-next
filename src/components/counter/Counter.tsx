@@ -5,12 +5,5 @@ import { observer } from "mobx-react-lite";
 
 export const Counter = observer(() => {
     const [{ hours, minutes, seconds, microseconds }] = useState(() => new CounterState());
-    return (
-        <Time
-            minutes={minutes}
-            hours={hours}
-            seconds={seconds}
-            microseconds={microseconds}
-        />
-    );
+    return <Time minutes={minutes} hours={hours} seconds={seconds} microseconds={microseconds} />;
 });
