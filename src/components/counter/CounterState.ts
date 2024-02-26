@@ -1,9 +1,12 @@
 import { action, computed, makeObservable, observable } from "mobx";
 import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
+dayjs.extend(duration);
 
 export class CounterState {
     private interval: null | NodeJS.Timeout = null;
-    @observable private clock: null | dayjs.Dayjs = null;
+    private startTime: null | dayjs.Dayjs = null;
+    @observable private clock: null | duration.Duration = null;
 
     public constructor() {
         makeObservable(this);
@@ -11,10 +14,13 @@ export class CounterState {
     }
 
     @action private tick = (): void => {
-        this.clock = dayjs();
+        if (this.startTime !== null) {
+            this.clock = dayjs.duration(dayjs().diff(this.startTime));
+        }
     };
 
     @action public start = (): void => {
+        this.startTime = dayjs();
         this.interval = setInterval(this.tick, 10);
     };
 
@@ -26,18 +32,18 @@ export class CounterState {
     };
 
     @computed public get hours(): number {
-        return this.clock?.hour() ?? 0;
+        return this.clock?.hours() ?? 0;
     }
 
     @computed public get minutes(): number {
-        return this.clock?.minute() ?? 0;
+        return this.clock?.minutes() ?? 0;
     }
 
     @computed public get seconds(): number {
-        return this.clock?.second() ?? 0;
+        return this.clock?.seconds() ?? 0;
     }
 
     @computed public get microseconds(): number {
-        return this.clock?.millisecond() ?? 0;
+        return this.clock?.milliseconds() ?? 0;
     }
 }
