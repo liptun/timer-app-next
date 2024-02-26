@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { ThemeProvider } from "@/utils/ThemeProvider";
+import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 import { Counter } from "./counter";
 import { Logo } from "./logo";
 
