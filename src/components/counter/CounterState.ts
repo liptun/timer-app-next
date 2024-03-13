@@ -31,6 +31,18 @@ export class CounterState {
         }
     };
 
+    @computed public get years(): number {
+        return this.clock?.years() ?? 0;
+    }
+
+    @computed public get months(): number {
+        return this.clock?.months() ?? 0;
+    }
+
+    @computed public get days(): number {
+        return this.clock?.days() ?? 0;
+    }
+
     @computed public get hours(): number {
         return this.clock?.hours() ?? 0;
     }

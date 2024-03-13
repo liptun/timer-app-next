@@ -4,6 +4,9 @@ import { Digit } from "../numbers/Numbers.style";
 import { TimeWrapper } from "./Time.style";
 
 type Props = {
+    years?: number;
+    months?: number;
+    days?: number;
     hours: number;
     minutes: number;
     seconds: number;
@@ -11,8 +14,35 @@ type Props = {
     hideLabels?: boolean;
 };
 
-export const Time = ({ hours, minutes, seconds, microseconds, hideLabels = false }: Props): JSX.Element => (
+export const Time = ({
+    years,
+    months,
+    days,
+    hours,
+    minutes,
+    seconds,
+    microseconds,
+    hideLabels = false,
+}: Props): JSX.Element => (
     <TimeWrapper>
+        {years !== undefined && (
+            <>
+                <Numbers number={years} digits={2} label={hideLabels ? undefined : "years"} />
+                <Digit $narrow>:</Digit>
+            </>
+        )}
+        {months !== undefined && (
+            <>
+                <Numbers number={months} digits={2} label={hideLabels ? undefined : "months"} />
+                <Digit $narrow>:</Digit>
+            </>
+        )}
+        {days !== undefined && (
+            <>
+                <Numbers number={days} digits={2} label={hideLabels ? undefined : "days"} />
+                <Digit $narrow>:</Digit>
+            </>
+        )}
         <Numbers number={hours} digits={2} label={hideLabels ? undefined : "hours"} />
         <Digit $narrow>:</Digit>
         <Numbers number={minutes} digits={2} label={hideLabels ? undefined : "minutes"} />

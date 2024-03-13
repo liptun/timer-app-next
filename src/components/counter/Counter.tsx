@@ -8,8 +8,17 @@ type Props = {
 };
 
 export const Counter = observer(({ hideLabels = false }: Props) => {
-    const [{ hours, minutes, seconds, microseconds }] = useState(() => new CounterState());
+    const [{ years, months, days, hours, minutes, seconds, microseconds }] = useState(() => new CounterState());
     return (
-        <Time minutes={minutes} hours={hours} seconds={seconds} microseconds={microseconds} hideLabels={hideLabels} />
+        <Time
+            years={years}
+            months={months}
+            days={days}
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
+            microseconds={microseconds}
+            hideLabels={hideLabels}
+        />
     );
 });
