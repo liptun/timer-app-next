@@ -1,8 +1,6 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Time } from "./Time";
-import { ThemeProvider } from "@/utils/ThemeProvider/ThemeProvider";
 
 const meta: Meta<typeof Time> = {
     title: "Components/Time",
@@ -18,11 +16,6 @@ export const Basic: Story = {
         minutes: 0,
         seconds: 0,
     },
-    render: (args) => (
-        <ThemeProvider>
-            <Time {...args} />
-        </ThemeProvider>
-    ),
 };
 
 export const WithMicroseconds: Story = {
@@ -32,9 +25,4 @@ export const WithMicroseconds: Story = {
         seconds: 0,
         microseconds: 0,
     },
-    render: (args) => (
-        <ThemeProvider>
-            <Time {...args} />
-        </ThemeProvider>
-    ),
 };
