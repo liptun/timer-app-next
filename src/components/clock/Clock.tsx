@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Time } from "../time/Time";
+import { Time } from "src/components/time";
+
 import { ClockState } from "./ClockState";
 import { observer } from "mobx-react-lite";
 

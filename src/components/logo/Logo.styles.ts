@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { LogoSVG } from "@/icons";
-import { Theme } from "@/utils/ThemeProvider/theme";
+import { LogoSVG } from "src/icons";
+import { Theme } from "src/utils/ThemeProvider/theme";
 
 export const LogoWrapper = styled("div")`
     display: flex;

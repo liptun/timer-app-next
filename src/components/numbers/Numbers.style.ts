@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Theme } from "@/utils/ThemeProvider/theme";
+import { Theme } from "src/utils/ThemeProvider/theme";
 
 export const Wrapper = styled("div")`
     position: relative;

@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Button } from ".";
-import { ThemeProvider } from "@/utils/ThemeProvider";
+import { ThemeProvider } from "src/utils/ThemeProvider";
 
 describe("Button", () => {
     it("render label", () => {

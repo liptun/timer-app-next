@@ -1,6 +1,6 @@
 import React from "react";
-import { Numbers } from "../numbers/Numbers";
-import { Digit } from "../numbers/Numbers.style";
+import { Numbers } from "src/components/numbers";
+import { Digit } from "src/components/numbers/Numbers.style";
 import { TimeWrapper } from "./Time.style";
 
 type Props = {

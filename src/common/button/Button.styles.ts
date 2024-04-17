@@ -1,4 +1,4 @@
-import { Theme } from "@/utils/ThemeProvider/theme";
+import { Theme } from "src/utils/ThemeProvider/theme";
 import styled, { RuleSet, css } from "styled-components";
 
 const disabledButtonCss = css`

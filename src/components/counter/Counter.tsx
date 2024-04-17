@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Time } from "../time/Time";
+import { Time } from "src/components/time";
 import { CounterState } from "./CounterState";
 import { observer } from "mobx-react-lite";
 
