@@ -1,5 +1,5 @@
 import React from "react";
-import { LogoIcon, LogoWrapper } from "./Logo.styles";
+import { LogoIcon, LogoWrapper } from "./Logo.style";
 
 export const Logo = (): JSX.Element => (
     <LogoWrapper>

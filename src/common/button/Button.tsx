@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { ButtonElement } from "./Button.styles";
+import { ButtonElement } from "./Button.style";
 
 type Props = {
     onClickHandle?: () => void;

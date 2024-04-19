@@ -1,8 +1,8 @@
-import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Button } from ".";
 import { ThemeProvider } from "src/utils/ThemeProvider";
+import { describe, it, expect, vi } from "vitest";
 
 describe("Button", () => {
     it("render label", () => {
@@ -12,12 +12,11 @@ describe("Button", () => {
             </ThemeProvider>
         );
         const button = screen.getByText("Button");
-        expect(button).toBeInTheDocument();
+        expect(button.tagName).toBe("BUTTON");
     });
 
     it("onClickHandle call", () => {
-        const callbackFn = jest.fn();
-
+        const callbackFn = vi.fn();
         render(
             <ThemeProvider>
                 <Button onClickHandle={callbackFn}>Button</Button>
@@ -31,7 +30,7 @@ describe("Button", () => {
     });
 
     it("should not click", () => {
-        const callbackFn = jest.fn();
+        const callbackFn = vi.fn();
 
         render(
             <ThemeProvider>

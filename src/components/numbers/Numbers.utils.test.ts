@@ -1,3 +1,4 @@
+import { expect, it, describe } from "vitest";
 import { numberToString } from "./Numbers.utils";
 
 describe("One digit", () => {
