@@ -8,12 +8,14 @@ export default defineConfig({
     test: {
         environment: "jsdom",
         setupFiles: "./setupTests.ts",
+        globals: true,
+        exclude: [...configDefaults.exclude, "__mocks__/*"],
         coverage: {
             provider: "v8",
             reporter: ["text", "json", "html"],
             exclude: [
                 ...(configDefaults.coverage.exclude ?? []),
-                "__mocks__",
+                "__mocks__/*",
                 "next.config.js",
                 "**/*.stories.*",
                 "**/*.style.*",

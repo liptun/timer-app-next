@@ -1,3 +1,3 @@
-const mockFontSource = jest.fn();
+const mockFontSource = vi.fn();
 
 export default mockFontSource;

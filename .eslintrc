@@ -6,7 +6,6 @@
     },
     "globals": {
         "NodeJS": true,
-        "jest": "readonly",
         "describe": "readonly",
         "it": "readonly",
         "expect": "readonly"
@@ -14,7 +13,6 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:jest/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
     ],
@@ -25,7 +23,7 @@
         "sourceType": "module",
         "project": "./tsconfig.json"
     },
-    "plugins": ["react", "jest", "prettier", "no-relative-import-paths"],
+    "plugins": ["react", "prettier", "no-relative-import-paths"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],

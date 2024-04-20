@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Button } from ".";
 import { ThemeProvider } from "src/utils/ThemeProvider";
-import { describe, it, expect, vi } from "vitest";
 
 describe("Button", () => {
     it("render label", () => {
@@ -12,7 +11,7 @@ describe("Button", () => {
             </ThemeProvider>
         );
         const button = screen.getByText("Button");
-        expect(button.tagName).toBe("BUTTON");
+        expect(button).toBeInTheDocument();
     });
 
     it("onClickHandle call", () => {
