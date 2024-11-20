@@ -23,6 +23,7 @@
   "dependencies": {
     "@fontsource/baloo-da-2": "^5.0.18",
     "@styled/typescript-styled-plugin": "^1.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "dayjs": "^1.11.10",
     "mobx": "^6.11.0",
     "mobx-react-lite": "^4.0.5",
